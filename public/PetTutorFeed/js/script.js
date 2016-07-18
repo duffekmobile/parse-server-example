@@ -15,7 +15,7 @@ I had this because I wasn't sure how to create
 a new row in Parse manually, so I decided to use code
 instead.
 ~~~~~~~~~~~~~~~~~~~~*/
-/*
+
 var RemoteFeed = Parse.Object.extend("RemoteFeed");
 var remoteFeed = new RemoteFeed();
 
@@ -32,7 +32,7 @@ remoteFeed.save(null, {
     alert('Failed to create new object, with error code: ' + error.message);
   }
 });
-*/
+
 
 /*~~~~~~~~~~~~~~~~~~~~
  This prints to the console the current
