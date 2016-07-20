@@ -15,6 +15,7 @@ Steps.init = function() {
 Steps.buildParseUrl = function() {
   var url = Config.getUrl();
   $('#parse-url').html(url + '/parse');
+    console.log(Config.getUrl());
 }
 
 Steps.bindBtn = function(id, callback) {
