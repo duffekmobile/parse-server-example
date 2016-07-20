@@ -3,7 +3,7 @@ Parse.$ = jQuery;
 /*~~~~~~~~~~~~~~~~~~~~
 Initialize Parse with your Parse application javascript keys
 ~~~~~~~~~~~~~~~~~~~~*/
-Parse.initialize("pettutor");
+Parse.initialize("pettutor"); //THIS IS APP ID NOT MASTER KEY
 //console.log("Hello");
 Parse.serverURL = "https://ptremotetest.herokuapp.com/parse"
 
