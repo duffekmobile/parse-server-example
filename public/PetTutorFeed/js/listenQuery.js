@@ -4,7 +4,7 @@ Parse.$ = jQuery;
 Initialize Parse with your Parse application javascript keys
 ~~~~~~~~~~~~~~~~~~~~*/
 Parse.initialize("");
-Parse.serverURL = "/parse"
+Parse.serverURL = "https://ptremotetest.herokuapp.com"
 
 var RemoteFeed = Parse.Object.extend("RemoteFeed");
 var parObj;
