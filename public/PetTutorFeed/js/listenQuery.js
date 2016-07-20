@@ -4,6 +4,7 @@ Parse.$ = jQuery;
 Initialize Parse with your Parse application javascript keys
 ~~~~~~~~~~~~~~~~~~~~*/
 Parse.initialize("pettutor");
+console.log("Hello");
 Parse.serverURL = "https://ptremotetest.herokuapp.com/parse"
 
 var RemoteFeed = Parse.Object.extend("RemoteFeed");
@@ -26,7 +27,7 @@ function listenToggle() {
  state of shouldFeed from Parse every 5 seconds
  ~~~~~~~~~~~~~~~~~~~~*/
 function listenForFeed(obj) {
-    //console.log("See me every 5 seconds!");
+    console.log("listen");
     var query = new Parse.Query(RemoteFeed);
 
 
