@@ -63,7 +63,7 @@ ParseRequest.postData = function() {
       e.preventDefault();
     });
   });
-  XHR.POST('/parse/classes/GameScore');
+  XHR.POST('/parse/classes/RemoteFeed');
 }
 
 ParseRequest.getData = function() {
