@@ -38,6 +38,7 @@ function feedQuery(){
 This sets shouldFeed to true
  ~~~~~~~~~~~~~~~~~~~~*/
 function feedButton() {
+    console.log(parObj);
     parObj.set("shouldFeed", true);
     parObj.save(null, {
         success: function(parObj) {
