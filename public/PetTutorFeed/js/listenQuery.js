@@ -4,9 +4,9 @@ Parse.$ = jQuery;
 Initialize Parse with your Parse application javascript keys
 ~~~~~~~~~~~~~~~~~~~~*/
 Parse.initialize("123123123");
-Parse.serverURL = "/parse/classes/RemoteFeed"
+Parse.serverURL = ""
 
-var RemoteFeed = Parse.Object.extend("GameScore");
+var RemoteFeed = Parse.Object.extend("RemoteFeed");
 var parObj;
 var timeToggle;
 
