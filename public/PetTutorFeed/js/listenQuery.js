@@ -6,7 +6,7 @@ Initialize Parse with your Parse application javascript keys
 Parse.initialize("123123123");
 Parse.serverURL = "https://ptremotetest.herokuapp.com"
 
-var RemoteFeed = Parse.Object.extend("RemoteFeed");
+var RemoteFeed = Parse.Object.extend("GameScore");
 var parObj;
 var timeToggle;
 
