@@ -14,7 +14,7 @@ if (!databaseUri) {
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://heroku_lwc1zgww:a4v7p8ht4f1uu9ubch6825an8q@ds023455.mlab.com:23455/heroku_lwc1zgww',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'myAppId',
+  appId: /*process.env.APP_ID ||*/'pettutor',
   masterKey: process.env.MASTER_KEY || 'pettutor', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'https://ptremotetest.herokuapp.com/',  // Don't forget to change to https if needed
   liveQuery: {
