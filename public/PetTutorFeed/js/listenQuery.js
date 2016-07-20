@@ -3,7 +3,7 @@ Parse.$ = jQuery;
 /*~~~~~~~~~~~~~~~~~~~~
 Initialize Parse with your Parse application javascript keys
 ~~~~~~~~~~~~~~~~~~~~*/
-Parse.initialize("123123123");
+Parse.initialize("");
 Parse.serverURL = "/parse"
 
 var RemoteFeed = Parse.Object.extend("RemoteFeed");
