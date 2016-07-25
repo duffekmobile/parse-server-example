@@ -55,6 +55,7 @@ function listenForFeed(obj) {
                 timeMil = currentTime.getTime();
 
                 timer = timeMil - updateMil;
+                console.log(timemil + " - " + updateMil);
                 console.log("Time from server: " + timer);
 
                 setFalse(object);
