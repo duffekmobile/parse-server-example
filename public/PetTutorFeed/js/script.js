@@ -19,7 +19,8 @@ instead.
 var RemoteFeed = Parse.Object.extend("RemoteFeed");
 var remoteFeed = new RemoteFeed();
 
-remoteFeed.set("shouldFeed", false);
+startTime = event.timeStamp;
+remoteFeed.set("startTime", startTime);
 
 remoteFeed.save(null, {
   success: function(remoteFeed) {
