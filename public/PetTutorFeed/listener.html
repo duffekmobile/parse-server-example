@@ -48,21 +48,15 @@
 
   <body>
     <div align="center" style="margin-top: 20%">
+        <input type="button" value="Start/View Stream" onclick="startVideo()" class="button-on">
+        <br><br>
+        <div id="remotesVideos"></div>
+        <br><br>
         <input type="button" value="Listen" onclick="listenToggle()" id="listenBtn" class="button-on">
         <br><br>
-        <input type="button" value="Start/View Stream" onclick="startVideo()"class="button-on">
+
 
     </div>
-
-    <!--
-    <div class="booth">
-        <video id="video" width="400" height="300"></video>
-    </div>
-    <script src="js/video.js"></script>
-    -->
-
-    <!-- <video height="300" id="localVideo"></video> -->
-    <div id="remotesVideos"></div>
 
     <script>
         function startVideo(){

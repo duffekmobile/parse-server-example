@@ -66,7 +66,7 @@ function timer(obj){
     //timer starts
     if(obj == null){
         document.getElementById("feedButton").className = "button-off";
-        //console.log(obj)
+        console.log(obj)
         startTime = event.timeStamp;
         console.log("start= " + startTime);
     }
@@ -74,7 +74,7 @@ function timer(obj){
     //timer ends and calculates difference
     else{
         document.getElementById("feedButton").className = "button-on";
-        //console.log(obj)
+        console.log(obj)
         endTime = event.timeStamp;
         console.log("end= " + endTime);
         durationTime = endTime - startTime;
