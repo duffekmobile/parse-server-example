@@ -8,6 +8,7 @@ Parse.serverURL = "https://ptremotetest.herokuapp.com/parse"
 
 var RemoteFeed = Parse.Object.extend("RemoteFeed");
 var parObj;
+var startTime;
 
 /*~~~~~~~~~~~~~~~~~~~~
 This makes a new row and sets it to false.
@@ -19,7 +20,7 @@ instead.
 var RemoteFeed = Parse.Object.extend("RemoteFeed");
 var remoteFeed = new RemoteFeed();
 
-var startTime = event.timeStamp;
+startTime = event.timeStamp;
 remoteFeed.set("startTime", startTime);
 
 remoteFeed.save(null, {
