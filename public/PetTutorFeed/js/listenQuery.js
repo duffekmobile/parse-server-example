@@ -44,8 +44,6 @@ function listenForFeed(obj) {
             if(object.get("shouldFeed") == false){
                 console.log("Listening");
                 console.log("Last Updated: " + object.updatedAt);
-                lastUpdateTime = object.updatedAt;
-                updateMil = lastUpdateTime.getTime();
             }else{
                 console.log("FEEDING!");
                 console.log("Last Updated: " + object.updatedAt);
