@@ -5,7 +5,7 @@ Initialize Parse with your Parse application javascript keys
 ~~~~~~~~~~~~~~~~~~~~*/
 Parse.initialize("pettutor"); //THIS IS APP ID NOT MASTER KEY
 //console.log("Hello");
-Parse.serverURL = "https://ptremotetest.herokuapp.com/parse"
+Parse.serverURL = "https://ptremotetest.herokuapp.com/parse";
 
 var RemoteFeed = Parse.Object.extend("RemoteFeed");
 var parObj;
