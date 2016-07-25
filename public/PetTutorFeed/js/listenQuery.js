@@ -11,6 +11,9 @@ var RemoteFeed = Parse.Object.extend("RemoteFeed");
 var parObj;
 var timeToggle;
 var lastUpdateTime;
+var currentTime;
+var timeMil;
+var timer;
 
 function listenToggle() {
     if (timeToggle != 1) {
@@ -40,10 +43,22 @@ function listenForFeed(obj) {
             console.log(parObj.get("shouldFeed"));
             if(object.get("shouldFeed") == false){
                 console.log("Listening");
+                console.log("Last Updated: " + object.updatedAt);
+                lastUpdateTime = object.updatedAt;
+                updateMil = lastUpdateTime.getTime();
             }else{
                 console.log("FEEDING!");
                 console.log("Last Updated: " + object.updatedAt);
+
                 lastUpdateTime = object.updatedAt;
+                updateMil = lastUpdateTime.getTime();
+
+                currentTime = new Date();
+                timeMil = currentTime.getTime();
+
+                timer = timeMil - updateMil;
+                console.log("Time from server: " + timer);
+
                 setFalse(object);
             }
         },
