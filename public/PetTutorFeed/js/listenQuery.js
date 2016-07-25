@@ -41,6 +41,7 @@ function listenForFeed(obj) {
                 console.log("Listening");
             }else{
                 console.log("FEEDING!");
+                console.log("Last Updated: " + object.get("_updated_at"));
                 setFalse(object);
             }
         },

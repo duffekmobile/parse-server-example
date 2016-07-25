@@ -8,20 +8,18 @@ Parse.serverURL = "https://ptremotetest.herokuapp.com/parse"
 
 var RemoteFeed = Parse.Object.extend("RemoteFeed");
 var parObj;
-var startTime;
 
 /*~~~~~~~~~~~~~~~~~~~~
 This makes a new row and sets it to false.
 I had this because I wasn't sure how to create
 a new row in Parse manually, so I decided to use code
 instead.
-~~~~~~~~~~~~~~~~~~~~*/
+~~~~~~~~~~~~~~~~~~~~
 
 var RemoteFeed = Parse.Object.extend("RemoteFeed");
 var remoteFeed = new RemoteFeed();
 
-startTime = event.timeStamp;
-remoteFeed.set("startTime", startTime);
+remoteFeed.set("shouldFeed", false);
 
 remoteFeed.save(null, {
   success: function(remoteFeed) {
@@ -35,6 +33,7 @@ remoteFeed.save(null, {
   }
 });
 
+*/
 
 /*~~~~~~~~~~~~~~~~~~~~
  This prints to the console the current
