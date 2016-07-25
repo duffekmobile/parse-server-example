@@ -10,6 +10,7 @@ Parse.serverURL = "https://ptremotetest.herokuapp.com/parse";
 var RemoteFeed = Parse.Object.extend("RemoteFeed");
 var parObj;
 var timeToggle;
+var lastUpdateTime;
 
 function listenToggle() {
     if (timeToggle != 1) {
@@ -41,7 +42,8 @@ function listenForFeed(obj) {
                 console.log("Listening");
             }else{
                 console.log("FEEDING!");
-                console.log("Last Updated: " + object.get("_updated_at"));
+                console.log("Last Updated: " + object.updatedAt);
+                lastUpdateTime = object.updatedAt;
                 setFalse(object);
             }
         },
