@@ -49,13 +49,13 @@ function listenForFeed(obj) {
                 console.log("Last Updated: " + object.updatedAt);
 
                 lastUpdateTime = object.updatedAt;
-                updateMil = lastUpdateTime.getTime();
-
                 currentTime = new Date();
+
+                updateMil = lastUpdateTime.getTime();
                 timeMil = currentTime.getTime();
 
                 timer = timeMil - updateMil;
-                //console.log(" " + timemil + " - " + updateMil);
+                console.log("Equation: " + timeMil + " - " + updateMil);
                 console.log("Time from server: " + timer);
 
                 setFalse(object);
