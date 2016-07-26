@@ -83,6 +83,7 @@ function timer(obj){
         console.log("end= " + endTime);
         durationTime = endTime - startTime;
         console.log("duration= " + durationTime);
+        console.log("Updated at: " + obj.updatedAt);
     }
 }
 
