@@ -48,11 +48,11 @@ function listenForFeed(obj) {
                 console.log("FEEDING!");
                 console.log("Last Updated: " + object.updatedAt);
 
-                lastUpdateTime = object.updatedAt;
                 currentTime = new Date();
-
-                updateMil = lastUpdateTime.getTime();
+                lastUpdateTime = object.updatedAt;
+                
                 timeMil = currentTime.getTime();
+                updateMil = lastUpdateTime.getTime();
 
                 timer = timeMil - updateMil;
                 console.log("Equation: " + currentTime + " - " + lastUpdateTime);
