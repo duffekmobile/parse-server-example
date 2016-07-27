@@ -39,6 +39,7 @@ function listenForFeed(obj) {
         function(error){
             console.log("Error!");
         });
+
     /*
     //console.log("listen");
     var query = new Parse.Query(RemoteFeed);
