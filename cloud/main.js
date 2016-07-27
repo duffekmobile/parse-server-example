@@ -16,7 +16,7 @@ Parse.Cloud.define('checkFeedStatus', function(request, response) {
     function checkForChange() {
         
         var q = new Parse.Query( Parse.Object.extend('RemoteFeed') );
-        q.get('').then(function(remoteFeedObject) {
+        q.get('OhHL5g0ToP').then(function(remoteFeedObject) {
 
             var currentTime = new Date().getTime();
             
