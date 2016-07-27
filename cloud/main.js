@@ -15,9 +15,8 @@ Parse.Cloud.define('checkFeedStatus', function(request, response) {
     // Function we want to repeat
     function checkForChange() {
 
-
         var q = new Parse.Query( Parse.Object.extend('RemoteFeed') );
-        q.first().then(function(remoteFeedObject) {
+        q.get('OhHL5g0ToP').then(function(remoteFeedObject) {
 
             var currentTime = new Date().getTime();
 
@@ -27,7 +26,9 @@ Parse.Cloud.define('checkFeedStatus', function(request, response) {
             }
             // if we havent reached the time limit, check again
             else if (currentTime - startTime < timeLimit) {
-    
+
+                var n = 0;
+                while(n < 20000) {n++;}
                 checkForChange();
             }
             // otherwise exit and say that no change was detected
