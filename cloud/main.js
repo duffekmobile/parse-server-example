@@ -26,6 +26,7 @@ Parse.Cloud.define('checkFeedStatus', function(request, response) {
 
             // if feed var was set, respond with true
             if(remoteFeedObject.get("shouldFeed")) {
+                remoteFeedObject.save({shouldFeed: false});
                 response.success("Should feed");
             }
             // if we havent reached the time limit, check again
