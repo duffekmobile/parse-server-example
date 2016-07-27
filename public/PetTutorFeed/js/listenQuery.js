@@ -50,7 +50,7 @@ function listenForFeed() {
                 $('body').css('background','#00F');
             }, 400);
             setTimeout(function() {
-                $('body').css('background','#FF');
+                $('body').css('background','#FFF');
             }, 600);
 
         }
