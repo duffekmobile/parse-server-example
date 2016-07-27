@@ -42,15 +42,15 @@ function listenForFeed() {
             timeNow = new Date().getTime();
             console.log("Feed Detected at: " + timeNow);
 
-            $('body').css('backgroundColor','#00F');
+            $('body').css('background','#00F');
             setTimeout(function() {
-                $('body').css('backgroundColor','#FFF');
+                $('body').css('background','#FFF');
             }, 200);
             setTimeout(function() {
-                $('body').css('backgroundColor','#00F');
+                $('body').css('background','#00F');
             }, 400);
             setTimeout(function() {
-                $('body').css('backgroundColor','#FF');
+                $('body').css('background','#FF');
             }, 600);
 
         }
