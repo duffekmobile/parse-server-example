@@ -31,7 +31,14 @@ function listenToggle() {
  state of shouldFeed from Parse every 5 seconds
  ~~~~~~~~~~~~~~~~~~~~*/
 function listenForFeed(obj) {
-    Parse.Cloud.run('checkFeedStatus');
+    //Parse.Cloud.run('checkFeedStatus');
+    var query = new Parse.Query(RemoteFeed);
+    query.first().then(function(object){
+            console.log("Hello! " + object.get("shouldFeed"));
+        },
+        function(error){
+            console.log("Error!");
+        });
     /*
     //console.log("listen");
     var query = new Parse.Query(RemoteFeed);
