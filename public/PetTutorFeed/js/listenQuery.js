@@ -37,7 +37,8 @@ function listenForFeed() {
     console.log("Listening... ");
     Parse.Cloud.run('checkFeedStatus').then(function(response){
         console.log(response);
-
+        timeNow = new Date().getTime();
+        console.log("Time: " + timeNow);
     });
     /*
     var query = new Parse.Query(RemoteFeed);
