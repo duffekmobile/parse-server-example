@@ -48,6 +48,28 @@
     <div align="center" style="margin-top: 10%">
         <input type="button" value="FEED" onclick="feedButton(); timer()" id="feedButton" class="button-on">
     </div>
+    <input type="button" value="Start/View Stream" onclick="startVideo()" class="button-on">
+    <br><br>
+    <div id="remotesVideos"></div>
+
+    <script>
+        function startVideo(){
+            var webrtc = new SimpleWebRTC({
+                // the id/element dom element that will hold "our" video
+                localVideoEl: 'localVideo',
+                // the id/element dom element that will hold remote videos
+                remoteVideosEl: 'remotesVideos',
+                // immediately ask for camera access
+                autoRequestMedia: true
+            });
+
+            // we have to wait until it's ready
+            webrtc.on('readyToCall', function () {
+                // you can name it anything
+                webrtc.joinRoom('your awesome room name');
+            });
+        }
+    </script>
 
   </body>
 
