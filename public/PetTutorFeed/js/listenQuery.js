@@ -41,6 +41,19 @@ function listenForFeed() {
         if(response == "Should feed"){
             timeNow = new Date().getTime();
             console.log("Feed Detected at: " + timeNow);
+
+            $('body').css('backgroundColor','#00F');
+            setTimeout(function() {
+                $('body').css('backgroundColor','#FFF');
+            }, 200);
+            setTimeout(function() {
+                $('body').css('backgroundColor','#00F');
+            }, 400);
+            setTimeout(function() {
+                $('body').css('backgroundColor','#FF');
+            }, 600);
+
+
         }
 
         listenForFeed();
