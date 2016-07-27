@@ -43,7 +43,7 @@ function feedButton() {
         alert("You must Log in First");
     }else {
         timeNow = new Date().getTime();
-        console.log("Time: " + timeNow);
+        console.log("Button Clicked at: " + timeNow);
         console.log(parObj);
         parObj.set("shouldFeed", true);
         parObj.save(null, {
