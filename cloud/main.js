@@ -32,8 +32,8 @@ Parse.Cloud.define('checkFeedStatus', function(request, response) {
             // if we havent reached the time limit, check again
             else if (currentTime - startTime < timeLimit) {
 
-                var n = 0;
-                while(n < 20000) {n++;}
+                //var n = 0;
+                //while(n < 5000) {n++;}
                 checkForChange();
             }
             // otherwise exit and say that no change was detected
