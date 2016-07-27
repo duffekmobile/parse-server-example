@@ -53,7 +53,6 @@ function listenForFeed() {
                 $('body').css('backgroundColor','#FF');
             }, 600);
 
-
         }
 
         listenForFeed();
