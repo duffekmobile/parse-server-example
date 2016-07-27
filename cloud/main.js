@@ -16,35 +16,36 @@ Parse.Cloud.define('checkFeedStatus', function(request, response) {
     function checkForChange() {
 
         var q = new Parse.Query( Parse.Object.extend('RemoteFeed') );
-        q.get('OhHL5g0ToP').then(function(remoteFeedObject) {
+        q.get('39urGKGYSj').then(function(remoteFeedObject) {
 
-            response.success(remoteFeedObject);
+            //response.success(remoteFeedObject);
 
-            //
-            //
-            // var currentTime = new Date().getTime();
-            //
-            // // if feed var was set, respond with true
-            // if(remoteFeedObject.get("shouldFeed")) {
-            //     response.success("Should feed");
-            // }
-            // // if we havent reached the time limit, check again
-            // else if (currentTime - startTime < timeLimit) {
-            //
-            //     var n = 0;
-            //     while(n < 20000) {n++;}
-            //     checkForChange();
-            // }
-            // // otherwise exit and say that no change was detected
-            // else {
-            //     response.success("No change was detected");
-            // }
+
+
+            var currentTime = new Date().getTime();
+
+            // if feed var was set, respond with true
+            if(remoteFeedObject.get("shouldFeed")) {
+                response.success("Should feed");
+            }
+            // if we havent reached the time limit, check again
+            else if (currentTime - startTime < timeLimit) {
+
+                var n = 0;
+                while(n < 20000) {n++;}
+                checkForChange();
+            }
+            // otherwise exit and say that no change was detected
+            else {
+                response.success("No change was detected");
+            }
 
 
 
         }, function(e) {
             // handle error
 
+            response.error(e);
         });
 
     }
