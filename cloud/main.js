@@ -7,7 +7,7 @@ Parse.Cloud.define('hello', function(req, res) {
 
 
 Parse.Cloud.define('checkFeedStatus', function(request, response) {
-
+    console.log("Checking Feed Status");
     var startTime = new Date().getTime(); // Get the start time
     var timeLimit = 10000; // max time 10 seconds
     
