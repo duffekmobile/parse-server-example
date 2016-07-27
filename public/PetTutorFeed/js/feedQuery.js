@@ -41,7 +41,7 @@ function feedButton() {
     feedQuery();
     if(parObj == null){
         alert("You must Log in First");
-    }else {
+    }else{
         timeNow = new Date().getTime();
         console.log("Button Clicked at: " + timeNow);
         console.log(parObj);
