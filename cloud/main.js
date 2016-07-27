@@ -16,5 +16,5 @@ Parse.Cloud.define('checkFeedStatus', function(req, res) {
     });
 
 
-    //res.success('Hi');
+    res.success('Hi');
 });
