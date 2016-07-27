@@ -8,7 +8,6 @@ Parse.Cloud.define('hello', function(req, res) {
 
 Parse.Cloud.define('checkFeedStatus', function(req, res) {
     res.success(
-        
         var query = new Parse.Query(RemoteFeed);
         query.first().then(function(object){
             console.log("Hello! " + object.get("shouldFeed"));
