@@ -20,26 +20,64 @@
         display: inline-block;
         font-size: 16px;
     }
+    .booth {
+        width: 400px;
+        background: #ccc;
+        border: 10px solid #ddd;
+        margin: 0 auto;
+    }
 </style>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Parse JavaScript Todo App</title>
+    <title>Pet Tutor&trade; Remote | Beta</title>
     <link href="css/todos.css" media="all" rel="stylesheet" type="text/css"/>
     <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="js/underscore.js"></script>
     <!-- <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>-->
     <script src="js/parse.min.js"></script><!--  -->
-    <script src="js/script.js"></script>
+    <script src="js/feedQuery.js"></script>
+
+      <script src="rtcpeerconnection.bundle.js"></script>
+      <script src="js/latest-v2.js"></script>
   </head>
 
   <body>
-    <div align="center" style="margin-top: 20%">
-        <input type="button" value="Listen" onclick="setInterval(listenForFeed, 5000);" id="listenButton" class="button-on">
+    <div align="center" style="margin-top: 20%; margin-left:-20%">
+        
+        <iframe src="https://apprtc.appspot.com/" width="800px" height="600px"></iframe>
+
+        <br/>
+        
+
+<!--         <input type="button" value="Start/View Stream" onclick="startVideo()" class="button-on">
+        <br><br>
+ --> 
+        <div id="remotesVideos"></div>
+        <input type="button" value="Begin Training" onclick="feedQuery()" id="loginBtn" class="button-on"> <input type="button" value="FEED" onclick="feedButton(); timer()" id="feedButton" class="button-on">
     </div>
-    <div align="center" style="margin-top: 10%">
-        <input type="button" value="FEED" onclick="feedButton(); timer()" id="feedButton" class="button-on">
-    </div>
+
+
+    <script>
+        function startVideo(){
+            var webrtc = new SimpleWebRTC({
+                // the id/element dom element that will hold "our" video
+                localVideoEl: 'localVideo',
+                // the id/element dom element that will hold remote videos
+                remoteVideosEl: 'remotesVideos',
+                // immediately ask for camera access
+                autoRequestMedia: true
+            });
+
+            // we have to wait until it's ready
+            webrtc.on('readyToCall', function () {
+                // you can name it anything
+                webrtc.joinRoom('pettutorfeed');
+            });
+        }
+    </script>
+
   </body>
+
 
 </html>

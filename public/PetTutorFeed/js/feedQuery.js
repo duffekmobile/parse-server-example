@@ -40,7 +40,7 @@ This sets shouldFeed to true
 function feedButton() {
     feedQuery();
     if(parObj == null){
-        alert("You must Log in First");
+        alert("You must Begin Training First");
     }else{
         timeNow = new Date().getTime();
         console.log("Button Clicked at: " + timeNow);
@@ -96,10 +96,10 @@ Log In button
 $(document).ready(function(){
     $("#loginBtn").click(function(){
         $("#loginBtn").toggleClass("button-off");
-        if($("#loginBtn").val() == "Log In"){
-            $("#loginBtn").val("Log Out");
+        if($("#loginBtn").val() == "Begin Training"){
+            $("#loginBtn").val("End Training");
         }else{
-            $("#loginBtn").val("Log In");
+            $("#loginBtn").val("Begin Training");
         }
     })
 });

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<style>
+    .button-on {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    .button-off {
+        background-color: #DE6461; /* Red */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Parse JavaScript Todo App</title>
+    <link href="css/todos.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="js/underscore.js"></script>
+    <!-- <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>-->
+    <script src="js/parse.min.js"></script><!--  -->
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <div align="center" style="margin-top: 20%">
+        <input type="button" value="Listen" onclick="setInterval(listenForFeed, 5000);" id="listenButton" class="button-on">
+    </div>
+    <div align="center" style="margin-top: 10%">
+        <input type="button" value="FEED" onclick="feedButton(); timer()" id="feedButton" class="button-on">
+    </div>
+  </body>
+
+</html>
